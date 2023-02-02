@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "baseUrl": ".",
+        "paths": {
+            "@/components/*": ["src/components/*"],
+            "@/layout/*": ["src/layout/*"],
+            "@/config/*": ["src/config/*"],
+            "@/lib/*": ["src/lib/*"],
+            "@/utils/*": ["src/utils/*"],
+            "@/store/*": ["src/store/*"],
+            "@/styles/*": ["src/styles/*"]
+        }
+    }
+}

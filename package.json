@@ -1,0 +1,33 @@
+{
+	"name": "truffles-ui",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@headlessui/react": "^1.7.7",
+		"@next-auth/mongodb-adapter": "^1.1.1",
+		"mongodb": "^4.13.0",
+		"next": "13.1.1",
+		"next-auth": "^4.18.8",
+		"next-seo": "^5.11.1",
+		"react": "18.2.0",
+		"react-datepicker": "^4.10.0",
+		"react-dom": "18.2.0"
+	},
+	"devDependencies": {
+		"@tailwindcss/forms": "^0.4.0",
+		"autoprefixer": "10.4.5",
+		"eslint": "8.6.0",
+		"eslint-config-next": "^12.3.1",
+		"framer-motion": "^2.9.5",
+		"postcss": "^8.4.20",
+		"tailwindcss": "^3.2.4"
+	},
+	"overrides": {
+		"autoprefixer": "10.4.5"
+	}
+}

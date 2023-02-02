@@ -1,0 +1,464 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	padding: 0 !important;
+	margin: 0 !important;
+	@apply font-primary;
+	@apply bg-light-200 scroll-smooth;
+	@apply text-dark-500;
+	z-index: -2 !important;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/**************************************************************************/
+/************************    React Datepicker   ***************************/
+/**************************************************************************/
+.react-datepicker {
+	@apply rounded-md border-2 border-primary-500 overflow-hidden !important;
+}
+
+.react-datepicker__header {
+	@apply rounded-sm;
+}
+
+.react-datepicker__day:hover,
+.react-datepicker__time-list-item:hover {
+	@apply bg-primary-600 text-light-100 !important;
+}
+
+.react-datepicker__input-container > input {
+	@apply w-full focus:ring-primary-500 focus:border-primary-500 block pl-10 text-sm border border-gray-300 text-dark-300 rounded-md transition duration-300 cursor-pointer !important;
+}
+
+.react-datepicker__input-container > input:focus {
+	outline: none;
+	border: 2px solid #6cc027;
+}
+
+.react-datepicker__day--selected {
+	@apply bg-primary-600 !important;
+}
+
+.react-datepicker__navigation-icon {
+	@apply text-primary-600 !important;
+}
+
+/**************************************************************************/
+/*****************************    Hamburger Menu  *************************/
+/**************************************************************************/
+
+.hamburger_container::-webkit-scrollbar {
+	width: 0 !important; /* Remove scrollbar space */
+	background: transparent !important; /* Optional: just make scrollbar invisible */
+}
+
+@media (max-width: 670px) {
+	#menuToggle#menuToggle#menuToggle#menuToggle {
+		right: 15px;
+	}
+
+	#menu#menu#menu#menu#menu {
+		right: -75px;
+		width: 105vw;
+	}
+}
+
+@media (max-width: 786px) {
+	.hamburger_menu.hamburger_menu {
+		margin-top: 32px;
+	}
+}
+
+@media (max-width: 1000px) {
+	#menuToggle#menuToggle#menuToggle {
+		right: 15px;
+	}
+
+	#menu#menu#menu {
+		right: -75px;
+	}
+}
+
+a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+#menuToggle {
+	display: block;
+	position: absolute;
+	top: 23px;
+	right: 60px;
+	z-index: 1;
+	margin-top: -20px;
+	margin-right: 60px;
+}
+
+.toggler {
+	display: block;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	cursor: pointer;
+	object-fit: contain;
+	opacity: 0; /* hide this */
+	z-index: 3; /* and place it over the hamburger */
+}
+
+/* Hamburger */
+.hamburger {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.hamburger > div {
+	position: absolute;
+	width: 60%;
+	height: 3px;
+	border-radius: 1.2px;
+	transition: 0.4s;
+	@apply bg-black dark:bg-white;
+}
+
+.hamburger > div:before {
+	@apply bg-black dark:bg-white;
+	content: "";
+	position: absolute;
+	width: 75%;
+	height: 3px;
+	border-radius: 1.5px;
+	top: -10px;
+	right: 0;
+	transition: 0.4s;
+}
+
+.hamburger > div:after {
+	@apply bg-black dark:bg-white;
+	content: "";
+	position: absolute;
+	width: 85%;
+	height: 3px;
+	border-radius: 1.5px;
+	top: 10px;
+	right: 0;
+	transition: 0.4s;
+}
+
+.toggler:hover + .hamburger > div:before {
+	width: 100%;
+}
+
+.toggler:hover + .hamburger > div:after {
+	width: 100%;
+}
+
+.toggler:checked + .hamburger > div:before {
+	width: 100%;
+}
+
+.toggler:checked + .hamburger > div:after {
+	width: 100%;
+}
+
+.toggler:checked + .hamburger > div {
+	transform: rotate(135deg);
+	background-color: #fff;
+}
+
+.toggler:checked:hover + .hamburger > div {
+	transform: rotate(225deg);
+	background-color: #fff;
+}
+
+.toggler:checked + .hamburger > div:before,
+.toggler:checked + .hamburger > div:after {
+	top: 0;
+	transform: rotate(90deg);
+	background-color: #fff;
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+	position: absolute;
+	width: 100vw;
+	margin: -100px 0 0 0;
+	padding: 125px 30px 40px 30px;
+	right: -120px;
+	background: #0d0d0d;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	overflow-y: scroll !important;
+	/* to stop flickering of text in safari */
+	transform-origin: 0% 0%;
+	transform: translate(100%, 0);
+	transition: transform 1.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+	padding: 10px 0;
+	font-size: 22px;
+}
+
+/*
+ * fade it in from the left
+ */
+#menuToggle input:checked ~ div {
+	transform: scale(1, 1);
+	opacity: 1;
+}
+
+.hamburger_container {
+	height: 100vh;
+	overscroll-behavior: contain;
+	overflow-x: hidden !important;
+	margin-left: 15px;
+}
+
+.menu_box {
+	text-align: center;
+	width: 100%;
+	max-width: 1500px;
+	margin: 0 auto;
+	font-size: 16px;
+	max-height: 130vh;
+	padding-bottom: 40px;
+}
+
+.toggler:checked + .hamburger + #menu > .hamburger_container > .menu_box {
+	animation: menu_content_fade_in 1.5s ease-in-out;
+}
+
+.toggler:not(:checked) + .hamburger + #menu {
+	transition: transform 2s cubic-bezier(0.77, 0.2, 0.05, 1) 0.5s;
+}
+
+.toggler:not(:checked) + .hamburger + #menu > .hamburger_container > .menu_box {
+	animation: menu_content_fade_out 0.4s ease-out;
+	opacity: 0;
+}
+
+@keyframes menu_content_fade_in {
+	0% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes menu_content_fade_out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes slide_up {
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+
+	90% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes slide_down {
+	0% {
+		transform: translateY(-120px);
+		opacity: 0;
+	}
+
+	90% {
+		transform: translateY(-120px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes slide_left {
+	0% {
+		transform: translateX(80px);
+		opacity: 0;
+	}
+
+	80% {
+		transform: translateX(80px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes slide_right {
+	0% {
+		width: 0;
+		opacity: 0;
+	}
+
+	80% {
+		width: 0;
+		opacity: 0;
+	}
+
+	100% {
+		width: 100%;
+		opacity: 1;
+	}
+}
+
+.toggler:checked + .hamburger + #menu > .hamburger_container > .menu_box > div > .logo_div_anim {
+	animation: slide_down 1.2s ease-out;
+}
+
+.toggler:checked + .hamburger + #menu > .hamburger_container > .menu_box > div > .create_left_anim {
+	animation: slide_left 1.6s ease-in;
+}
+
+.toggler:checked + .hamburger + #menu > .hamburger_container > .menu_box > div > .create_left_anim + .dashboard_left_anim {
+	animation: slide_left 1.6s ease-in;
+}
+
+.toggler:checked + .hamburger + #menu > .hamburger_container > .menu_box > div + div + div > .horizontal_line_to_right {
+	animation: slide_right 2.6s ease-in;
+}
+
+.toggler:checked + .hamburger + #menu > .hamburger_container > .menu_box > div + .hamburger_menu {
+	animation: slide_up 2s ease-in;
+}
+
+.toggler:checked + .hamburger + #menu > .hamburger_container > .menu_box > div + .harmburger_menu_connect {
+	animation: slide_up 2.9s ease-in;
+}
+
+@keyframes text_glow {
+	to {
+		font-size: 1.05em;
+		color: #fff;
+		font-weight: 550;
+	}
+}
+
+.hamburger_logo_mxv {
+	width: 150px;
+}
+
+.hamburger_menu {
+	margin-top: 100px;
+}
+
+.ham_menu_hover_effect_row {
+	height: 32px !important;
+}
+
+.ham_menu_heading {
+	color: #fff;
+	font-size: 1.2em;
+	font-family: var(--Poppins);
+	font-weight: 600;
+	text-align: left;
+}
+
+.ham_menu_link {
+	color: #fff;
+	font-size: 1em;
+	font-family: var(--Poppins);
+	text-align: left;
+}
+
+.ham_menu_link:hover {
+	color: rgb(83, 194, 75);
+}
+
+@keyframes ham_menu_text_glow {
+	to {
+		font-size: 1.12em;
+		font-weight: 550;
+	}
+}
+
+.ham_menu_hover_effect:hover {
+	animation: ham_menu_text_glow 0.05s forwards;
+}
+
+.horizontal_line_to_right {
+	background-color: #fff !important;
+	height: 1.3px !important;
+}
+
+.connect_link {
+	@apply text-white hover:text-primary-500;
+}
+
+/**************************************************************************/
+/*****************************    Footer   ********************************/
+/**************************************************************************/
+
+.footer {
+	@apply w-full max-w-[1920px] py-16 px-6 md:px-8 lg:px-16 xl:px-20 2xl:px-36 backdrop-blur-2xl backdrop-brightness-150;
+}
+
+/* Loading ring animation */
+.loader {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	display: inline-block;
+	border-top: 2px solid #fff;
+	border-right: 2px solid transparent;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.bgGradient {
+	background-image: linear-gradient(95.79deg, #a76fff 10.21%, #7445f8 100%);
+}
