@@ -49,7 +49,6 @@ export default function EnterInformation() {
 	const step2Values = { nextStep, prevStep, startDate, setStartDate };
 
 	const webpageTitle = `${title_main_page} | ${pageTitle}`;
-
 	return (
 		<>
 			<Head>

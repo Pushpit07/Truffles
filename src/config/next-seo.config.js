@@ -3,10 +3,10 @@ export const SEO = {
 	titleTemplate: "Truffles | %s",
 	defaultTitle: "Truffles",
 	description: "Truffles is a suite of tools that allow businesses to navigate fiat and blockchain rails seamlessly for global payments.",
-	canonical: "https://truffles.vercel.app",
+	canonical: "https://truffles-one.vercel.app",
 	openGraph: {
 		siteName: "Truffles",
-		url: "https://truffles.vercel.app",
+		url: "https://truffles-one.vercel.app",
 		title: "Truffles",
 		description: "Truffles is a suite of tools that allow businesses to navigate fiat and blockchain rails seamlessly for global payments.",
 		images: [{ url: "/site_logo.png", width: 640, height: 640, alt: "Logo" }],

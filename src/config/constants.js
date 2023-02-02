@@ -4,6 +4,9 @@
 export const title_main_page = "Truffles";
 export const meta_description = "Truffles is a suite of tools that allow businesses to navigate fiat and blockchain rails seamlessly for global payments.";
 
+/**************************************************************************/
+/****************************   Constants   *******************************/
+/**************************************************************************/
 export const countryCodes = [
 	"US",
 	"IN",
