@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import Head from "next/head";
 import { title_main_page, meta_description } from "@/config/constants";
 import Image from "next/image";
@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 
 export default function HomePage() {
 	const canvasEl = useRef(null);
+	const [showCompleteKycReminder, setShowCompleteKycReminder] = useState(true);
 
 	useEffect(() => {
 		const colors = {
@@ -146,24 +147,28 @@ export default function HomePage() {
 							<SidebarButton imgSrc="/dashboard/contacts.png" text="Contacts" />
 						</motion.div>
 
-						<div className="basis-4/5 py-10 gap-y-4">
-							<div className="bg-primary-500 rounded-lg py-5 px-6">
-								<div className="flex flex-row justify-between items-center text-light-100">
-									<div className="flex flex-row items-center gap-x-5">
-										<Image src="/dashboard/attention.png" alt="attention" width="27" height="27" />
-										<div>
-											<p>Please complete the KYC</p>
-											<p className="text-xs">
-												Please follow the instructions in the email to complete account verification. Make sure to check your
-												promotions/spam as well.
-											</p>
+						<div className="basis-4/5 flex flex-col py-10 gap-y-4">
+							{showCompleteKycReminder && (
+								<div className="bg-primary-500 rounded-lg py-5 px-6">
+									<div className="flex flex-row justify-between items-center text-light-100">
+										<div className="flex flex-row items-center gap-x-5">
+											<Image src="/dashboard/attention.png" alt="attention" width="27" height="27" />
+											<div>
+												<p>Please complete the KYC</p>
+												<p className="text-xs">
+													Please follow the instructions in the email to complete account verification. Make sure to check your
+													promotions/spam as well.
+												</p>
+											</div>
 										</div>
+										<span onClick={() => setShowCompleteKycReminder(false)} className="cursor-pointer">
+											<Image src="/dashboard/close.png" alt="close" width="20" height="20" />
+										</span>
 									</div>
-									<Image src="/dashboard/close.png" alt="close" width="20" height="20" />
 								</div>
-							</div>
+							)}
 
-							<div className="w-full flex flex-row justify-between items-start gap-x-5 mt-6">
+							<div className="w-full flex flex-row justify-between items-start gap-x-5">
 								<div className="w-4/6 grid grid-cols-2 gap-5 justify-between items-center">
 									<Card imgSrc="/dashboard/fiat.png" text="Fiat Balance" balance={0} />
 									<Card imgSrc="/dashboard/crypto_balance.png" text="Crypto Balance" balance={0} />
