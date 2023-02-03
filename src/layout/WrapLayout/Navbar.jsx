@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -5,10 +6,12 @@ import logo from "../../../public/site_logo.png";
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 import { useSession, signOut } from "next-auth/react";
 import Button from "@/components/Button";
+import StatusContext from "@/store/status-context";
 
 const Navbar = ({ setAuthModalOpen }) => {
 	const router = useRouter();
 	const { data: session, status } = useSession();
+	const [, , , setError] = useContext(StatusContext);
 
 	let truncatedName;
 	if (session && session.user && session.user.name) {
@@ -52,7 +55,19 @@ const Navbar = ({ setAuthModalOpen }) => {
 							<ul className="flex flex-row items-center text-sm font-medium md:space-x-8 lg:space-x-3 xl:space-x-6 md:mt-0 sm:text-sm">
 								<li className="hidden md:block">
 									Having trouble?{" "}
-									<span className="text-primary-500 hover:text-primary-600 transition duration-300 cursor-pointer text-sm">Get Help</span>
+									<span
+										onClick={(e) => {
+											e.preventDefault();
+											setError({
+												title: "Oops! This link doesn't work",
+												message: "Will make it work when I join the team ;)",
+												showErrorBox: true,
+											});
+										}}
+										className="text-primary-500 hover:text-primary-600 transition duration-300 cursor-pointer text-sm"
+									>
+										Get Help
+									</span>
 								</li>
 								{/* Dropdown Menu */}
 								<li className="hidden md:block">

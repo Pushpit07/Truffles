@@ -9,21 +9,22 @@ import Chart from "chart.js/auto";
 export default function HomePage() {
 	const canvasEl = useRef(null);
 
-	const colors = {
-		orange: {
-			default: "rgba(255, 133, 64, 1)",
-			half: "rgba(255, 133, 64, 0.1)",
-			quarter: "rgba(255, 133, 64, 0)",
-			zero: "rgba(255, 133, 64, 0)",
-		},
-		green: {
-			default: "rgba(130, 214, 22, 1)",
-			half: "rgba(130, 214, 22, 0.1)",
-			quarter: "rgba(130, 214, 22, 0)",
-			zero: "rgba(130, 214, 22, 0)",
-		},
-	};
 	useEffect(() => {
+		const colors = {
+			orange: {
+				default: "rgba(255, 133, 64, 1)",
+				half: "rgba(255, 133, 64, 0.1)",
+				quarter: "rgba(255, 133, 64, 0)",
+				zero: "rgba(255, 133, 64, 0)",
+			},
+			green: {
+				default: "rgba(130, 214, 22, 1)",
+				half: "rgba(130, 214, 22, 0.1)",
+				quarter: "rgba(130, 214, 22, 0)",
+				zero: "rgba(130, 214, 22, 0)",
+			},
+		};
+
 		const ctx = canvasEl.current.getContext("2d");
 
 		const orangeGradient = ctx.createLinearGradient(0, 16, 0, 600);
@@ -123,7 +124,7 @@ export default function HomePage() {
 		return function cleanup() {
 			myLineChart.destroy();
 		};
-	});
+	}, []);
 
 	return (
 		<>
