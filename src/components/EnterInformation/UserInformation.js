@@ -92,7 +92,7 @@ const UserInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 						Male
 					</option>
 					<option name="gender" value="female">
-						Female.
+						Female
 					</option>
 				</select>
 			</div>
