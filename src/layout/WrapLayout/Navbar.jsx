@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import logo from "../../../public/site_logo.png";
-import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 import { useSession, signOut } from "next-auth/react";
 import Button from "@/components/Button";
 import StatusContext from "@/store/status-context";
@@ -37,7 +36,7 @@ const Navbar = ({ setAuthModalOpen }) => {
 						(router.pathname === "/" ? "bg-light-200" : "bg-light-100")
 					}
 				>
-					<div className="flex flex-wrap items-center justify-start w-full pl-7 sm:pl-9 lg:px-12 py-4">
+					<div className="flex flex-wrap items-center justify-start w-full pl-4 sm:pl-9 lg:pl-12 sm:pr-6 pr-2 py-4">
 						<Link href="/" passHref>
 							<Image src={logo} alt="MXV Logo" width="166" className="rounded-md" />
 						</Link>
@@ -51,9 +50,9 @@ const Navbar = ({ setAuthModalOpen }) => {
 							</div>
 						)}
 
-						<div className="ml-auto hidden md:block">
-							<ul className="flex flex-row items-center text-sm font-medium md:space-x-8 lg:space-x-3 xl:space-x-6 md:mt-0 sm:text-sm">
-								<li className="hidden md:block">
+						<div className="ml-auto">
+							<ul className="flex flex-row items-center text-sm font-medium space-x-8 lg:space-x-3 xl:space-x-6 md:mt-0 sm:text-sm">
+								<li className="hidden sm:block">
 									Having trouble?{" "}
 									<span
 										onClick={(e) => {
@@ -70,7 +69,7 @@ const Navbar = ({ setAuthModalOpen }) => {
 									</span>
 								</li>
 								{/* Dropdown Menu */}
-								<li className="hidden md:block">
+								<li className="block">
 									<ul className="relative group dropdown">
 										<a
 											className="flex items-center dropdown-toggle hidden-arrow"
@@ -140,9 +139,6 @@ const Navbar = ({ setAuthModalOpen }) => {
 								</li>
 							</ul>
 						</div>
-
-						{/* Hamburger Menu */}
-						<HamburgerMenu avatarUrl={session && session.user.image} truncatedName={session && session.user.name} />
 					</div>
 				</nav>
 			</div>

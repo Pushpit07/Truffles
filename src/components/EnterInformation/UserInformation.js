@@ -5,14 +5,14 @@ import Button from "@/components/Button";
 
 const UserInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 	return (
-		<div className="basis-4/5 flex flex-col py-12 px-24 gap-y-8 bg-light-100 min-h-screen">
+		<div className="basis-full md:basis-4/5 flex flex-col py-12 md:px-24 px-8 gap-y-8 bg-light-100 min-h-screen">
 			<div>
 				<h2 className="text-xl font-semibold">User Information</h2>
 				<p className="mt-1 text-sm text-dark-300">Please enter your details</p>
 			</div>
 
 			<div className="w-full flex gap-x-5">
-				<div className="w-full flex flex-col justify-start">
+				<div className="w-full flex flex-col justify-end">
 					<p className="text-dark-400 text-sm font-medium mb-1">Title</p>
 					<select
 						id="title"
@@ -33,7 +33,7 @@ const UserInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 					</select>
 				</div>
 
-				<div className="w-full flex flex-col justify-start">
+				<div className="w-full flex flex-col justify-end">
 					<p className="text-dark-400 text-sm font-medium mb-1">First name</p>
 					<input
 						type="text"
@@ -41,7 +41,7 @@ const UserInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 					/>
 				</div>
 
-				<div className="w-full flex flex-col justify-start">
+				<div className="w-full flex flex-col justify-end">
 					<p className="text-dark-400 text-sm font-medium mb-1">Last name</p>
 					<input
 						type="text"
@@ -50,7 +50,7 @@ const UserInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 				</div>
 			</div>
 
-			<div className="w-full flex flex-col justify-start">
+			<div className="w-full flex flex-col justify-end">
 				<p className="text-dark-400 text-sm font-medium mb-1">Mobile Number</p>
 				<div className="relative rounded-md">
 					<div className="absolute inset-y-0 left-0 flex items-center">
@@ -82,7 +82,7 @@ const UserInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 				</div>
 			</div>
 
-			<div className="w-full flex flex-col justify-start">
+			<div className="w-full flex flex-col justify-end">
 				<p className="text-dark-400 text-sm font-medium mb-1">Gender</p>
 				<select
 					id="gender"
@@ -97,7 +97,7 @@ const UserInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 				</select>
 			</div>
 
-			<div className="w-full flex flex-col justify-start">
+			<div className="w-full flex flex-col justify-end">
 				<p className="text-dark-400 text-sm font-medium mb-1">Nationality</p>
 				<select
 					id="nationality"
@@ -113,7 +113,7 @@ const UserInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 			</div>
 
 			<div className="w-full flex gap-x-5">
-				<div className="w-full flex flex-col justify-start">
+				<div className="w-full flex flex-col justify-end">
 					<p className="text-dark-400 text-sm font-medium mb-1">Residential Address</p>
 					<input
 						type="text"
@@ -121,7 +121,7 @@ const UserInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 					/>
 				</div>
 
-				<div className="w-full flex flex-col justify-start">
+				<div className="w-full flex flex-col justify-end">
 					<p className="text-dark-400 text-sm font-medium mb-1">Postal Code</p>
 					<input
 						type="text"
@@ -130,7 +130,7 @@ const UserInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 				</div>
 			</div>
 
-			<div className="w-full flex flex-col justify-start">
+			<div className="w-full flex flex-col justify-end">
 				<p className="text-dark-400 text-sm font-medium mb-1">Occupation</p>
 				<input
 					type="text"
@@ -138,7 +138,7 @@ const UserInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 				/>
 			</div>
 
-			<div className="w-full flex flex-col justify-start">
+			<div className="w-full flex flex-col justify-end">
 				<p className="text-dark-400 text-sm font-medium mb-1">Date of Birth</p>
 				<div className="relative rounded-md">
 					<div className="absolute inset-y-0 left-4 flex items-center z-[20]">

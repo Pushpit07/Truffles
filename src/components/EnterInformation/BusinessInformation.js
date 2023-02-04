@@ -4,13 +4,13 @@ import Button from "@/components/Button";
 
 const BusinessInformation = ({ nextStep, prevStep, startDate, setStartDate }) => {
 	return (
-		<div className="basis-4/5 flex flex-col py-12 px-24 gap-y-8 bg-light-100 min-h-screen">
+		<div className="basis-full md:basis-4/5 flex flex-col py-12 md:px-24 px-8 gap-y-8 bg-light-100 min-h-screen">
 			<div>
 				<h2 className="text-xl font-semibold">Business Information</h2>
 				<p className="mt-1 text-sm text-dark-300">Use a permanent address where you can receive mail</p>
 			</div>
 
-			<div className="w-full flex flex-col justify-start">
+			<div className="w-full flex flex-col justify-end">
 				<p className="text-dark-400 text-sm font-medium mb-1">Account ID</p>
 				<input
 					type="text"
@@ -18,7 +18,7 @@ const BusinessInformation = ({ nextStep, prevStep, startDate, setStartDate }) =>
 				/>
 			</div>
 
-			<div className="w-full flex flex-col justify-start">
+			<div className="w-full flex flex-col justify-end">
 				<p className="text-dark-400 text-sm font-medium mb-1">Company Name</p>
 				<input
 					type="text"
@@ -27,7 +27,7 @@ const BusinessInformation = ({ nextStep, prevStep, startDate, setStartDate }) =>
 			</div>
 
 			<div className="w-full flex gap-x-5">
-				<div className="w-full flex flex-col justify-start">
+				<div className="w-full flex flex-col justify-end">
 					<p className="text-dark-400 text-sm font-medium mb-1">Country of Incorporation</p>
 					<select
 						id="countryOfIncorporation"
@@ -41,7 +41,7 @@ const BusinessInformation = ({ nextStep, prevStep, startDate, setStartDate }) =>
 						</option>
 					</select>
 				</div>
-				<div className="w-full flex flex-col justify-start">
+				<div className="w-full flex flex-col justify-end">
 					<p className="text-dark-400 text-sm font-medium mb-1">Country of Operation</p>
 					<select
 						id="countryOfOperation"
@@ -57,7 +57,7 @@ const BusinessInformation = ({ nextStep, prevStep, startDate, setStartDate }) =>
 				</div>
 			</div>
 
-			<div className="w-full flex flex-col justify-start">
+			<div className="w-full flex flex-col justify-end">
 				<p className="text-dark-400 text-sm font-medium mb-1">Business Type</p>
 				<select
 					id="businessType"
@@ -72,7 +72,7 @@ const BusinessInformation = ({ nextStep, prevStep, startDate, setStartDate }) =>
 				</select>
 			</div>
 
-			<div className="w-full flex flex-col justify-start">
+			<div className="w-full flex flex-col justify-end">
 				<p className="text-dark-400 text-sm font-medium mb-1">Company Address</p>
 				<input
 					type="text"
@@ -81,7 +81,7 @@ const BusinessInformation = ({ nextStep, prevStep, startDate, setStartDate }) =>
 			</div>
 
 			<div className="w-full flex gap-x-5">
-				<div className="w-full flex flex-col justify-start">
+				<div className="w-full flex flex-col justify-end">
 					<p className="text-dark-400 text-sm font-medium mb-1">ZIP / Postal</p>
 					<input
 						type="text"
@@ -89,7 +89,7 @@ const BusinessInformation = ({ nextStep, prevStep, startDate, setStartDate }) =>
 					/>
 				</div>
 
-				<div className="w-full flex flex-col justify-start">
+				<div className="w-full flex flex-col justify-end">
 					<p className="text-dark-400 text-sm font-medium mb-1">State / Province</p>
 					<input
 						type="text"
@@ -97,7 +97,7 @@ const BusinessInformation = ({ nextStep, prevStep, startDate, setStartDate }) =>
 					/>
 				</div>
 
-				<div className="w-full flex flex-col justify-start">
+				<div className="w-full flex flex-col justify-end">
 					<p className="text-dark-400 text-sm font-medium mb-1">City</p>
 					<input
 						type="text"
@@ -106,7 +106,7 @@ const BusinessInformation = ({ nextStep, prevStep, startDate, setStartDate }) =>
 				</div>
 			</div>
 
-			<div className="w-full flex flex-col justify-start">
+			<div className="w-full flex flex-col justify-end">
 				<p className="text-dark-400 text-sm font-medium mb-1">Registration Number</p>
 				<input
 					type="text"
@@ -114,7 +114,7 @@ const BusinessInformation = ({ nextStep, prevStep, startDate, setStartDate }) =>
 				/>
 			</div>
 
-			<div className="w-full flex flex-col justify-start">
+			<div className="w-full flex flex-col justify-end">
 				<p className="text-dark-400 text-sm font-medium mb-1">Incorporation Date</p>
 				<div className="relative rounded-md">
 					<div className="absolute inset-y-0 left-4 flex items-center z-[20]">

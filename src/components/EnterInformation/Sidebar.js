@@ -2,7 +2,7 @@ import RegistrationStep from "@/components/EnterInformation/RegistrationStep";
 
 export default function Sidebar({ step, setStep }) {
 	return (
-		<div className="basis-1/5 p-12 space-y-4">
+		<div className="basis-full md:basis-1/5 p-12 space-y-4">
 			<ol className="flex flex-col items-start w-full space-y-8">
 				<RegistrationStep
 					text="USER INFORMATION"

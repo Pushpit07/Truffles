@@ -11,7 +11,7 @@ import Sidebar from "@/components/EnterInformation/Sidebar";
 export default function EnterInformation() {
 	const router = useRouter();
 
-	const [step, setStep] = useState(1);
+	const [step, setStep] = useState(parseInt(router.query.step) || 1);
 	const [startDate, setStartDate] = useState(new Date());
 	const [pageTitle, setPageTitle] = useState("User Information");
 
@@ -58,8 +58,8 @@ export default function EnterInformation() {
 			<ScrollToPageTop samePage={true} changingValue={step} />
 
 			<main className="flex flex-col items-center justify-center w-full bg-light-200">
-				<div className="w-full max-w-[1920px] flex justify-center items-start min-h-screen">
-					<div className="relative w-full h-full flex flex-row">
+				<div className="w-full max-w-[1920px] flex justify-center items-start">
+					<div className="relative w-full h-full flex flex-col md:flex-row">
 						<Sidebar step={step} setStep={setStep} />
 						{step == 1 ? <UserInformation {...step1Values} /> : step == 2 ? <BusinessInformation {...step2Values} /> : <EmptySection />}
 					</div>

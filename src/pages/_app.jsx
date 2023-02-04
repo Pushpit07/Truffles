@@ -9,6 +9,7 @@ import ScrollToPageTop from "@/utils/ScrollToPageTop";
 import StatusContext from "@/store/status-context";
 import LoadingContext from "@/store/loading-context";
 import AuthModalContext from "@/store/authModal-context";
+import "react-calendar/dist/Calendar.css";
 
 export default function App({ Component, pageProps, session, router }) {
 	useEffect(() => {
