@@ -37,15 +37,17 @@ const Navbar = ({ setAuthModalOpen }) => {
 					}
 				>
 					<div className="flex flex-wrap items-center justify-start w-full pl-4 sm:pl-9 lg:pl-12 sm:pr-6 pr-2 py-4">
-						<Link href="/" passHref>
-							<Image src={logo} alt="MXV Logo" width="166" className="rounded-md" />
-						</Link>
+						<div className="md:basis-1/5 flex w-fit">
+							<Link href="/" passHref>
+								<Image src={logo} alt="MXV Logo" width="166" className="rounded-md" />
+							</Link>
+						</div>
 
 						{/* Internal links */}
 						{router.pathname === "/" && (
-							<div className="hidden ml-10 lg:block">
+							<div className="hidden md:block lg:-ml-10 ml-2">
 								<ul className="flex flex-row items-center font-medium md:text-base md:space-x-3 xl:space-x-6 md:mt-0 sm:text-sm">
-									<li className="block pl-[76px] pr-4 text-dark-500 font-semibold text-[24px]">Dashboard</li>
+									<li className="block text-dark-500 font-semibold text-[24px]">Dashboard</li>
 								</ul>
 							</div>
 						)}

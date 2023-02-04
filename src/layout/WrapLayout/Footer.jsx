@@ -7,7 +7,11 @@ const Footer = () => {
 		<div className="flex justify-center w-full bg-light-100 border-t border-gray-200">
 			<div className="footer bg-light-100">
 				<div className="w-full flex sm:flex-row flex-col justify-between items-center">
-					<Image src={logo} alt="P~P logo" width="200" className="rounded-md sm:order-first order-1 sm:mt-0 mt-8" />
+					<div className="sm:order-first order-1 sm:mt-0 mt-8">
+						<Link href="/" passHref>
+							<Image src={logo} alt="Truffles logo" width="200" className="rounded-md" />
+						</Link>
+					</div>
 					<div className="order-first flex gap-x-8">
 						<Link href="/">
 							<p className="font-primary sm:text-lg text-base cursor-pointer hover:text-primary-500 transition duration-300">Home</p>
