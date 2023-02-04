@@ -16,7 +16,7 @@ const Footer = () => {
 						<Link href="/">
 							<p className="font-primary sm:text-lg text-base cursor-pointer hover:text-primary-500 transition duration-300">Home</p>
 						</Link>
-						<Link href="/enter-information?step=1">
+						<Link href="/registration-form?step=1">
 							<p className="font-primary sm:text-lg text-base cursor-pointer hover:text-primary-500 transition duration-300">Registration Form</p>
 						</Link>
 					</div>

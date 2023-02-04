@@ -1,4 +1,4 @@
-import RegistrationStep from "@/components/EnterInformation/RegistrationStep";
+import RegistrationStep from "@/components/Registration/RegistrationStep";
 
 export default function Sidebar({ step, setStep }) {
 	return (
