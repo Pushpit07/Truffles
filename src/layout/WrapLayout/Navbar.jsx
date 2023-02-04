@@ -126,7 +126,7 @@ const Navbar = ({ setAuthModalOpen }) => {
 												<li>
 													{status === "authenticated" ? (
 														<button
-															className="w-full px-4 pt-2 pb-3 font-medium transition-all bg-transparent cursor-pointer rounded-b-xl dark:border-light-300 hover:bg-gray-100 dark:hover:bg-error-600/30"
+															className="w-full px-4 pt-2 pb-3 font-medium transition-all bg-transparent cursor-pointer rounded-b-xl dark:border-light-300 hover:bg-gray-100 hover:bg-error-600/20"
 															onClick={() => signOut()}
 														>
 															Sign out

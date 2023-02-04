@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import Script from "next/script";
 import { SessionProvider } from "next-auth/react";
 import "react-datepicker/dist/react-datepicker.css";
-import * as ga from "@/lib/google-analytics";
+import "react-calendar/dist/Calendar.css";
 import "@/styles/globals.css";
+import * as ga from "@/lib/google-analytics";
 import Layout from "@/layout/WrapLayout/Layout";
 import ScrollToPageTop from "@/utils/ScrollToPageTop";
 import StatusContext from "@/store/status-context";
 import LoadingContext from "@/store/loading-context";
 import AuthModalContext from "@/store/authModal-context";
-import "react-calendar/dist/Calendar.css";
 
 export default function App({ Component, pageProps, session, router }) {
 	useEffect(() => {

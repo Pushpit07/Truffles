@@ -23,9 +23,10 @@ export default function Position({ trend, ticker, tfid, price }) {
 
 	return (
 		<motion.div
-			className="w-full flex flex-row justify-between px-5 py-4 items-center hover:bg-light-200 rounded-lg transition duration-300 cursor-pointer"
-			initial={{ opacity: 0, scale: 0.5 }}
-			animate={{ opacity: 1, scale: 1 }}
+			className="w-full flex flex-row justify-between px-5 2xl:py-5 py-4 items-center hover:bg-light-200 rounded-lg transition duration-300 cursor-pointer"
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.2 }}
 			onClick={() =>
 				setError({
 					title: "Oops! This doesn't work yet!",
