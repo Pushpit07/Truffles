@@ -49,7 +49,7 @@ export default function Card({ imgSrc, text, balance }) {
 			<div className="flex flex-col gap-y-4">
 				<div className="text-dark-200 sm:text-base text-xs">{text}</div>
 				<div className="flex text-dark-500 font-bold sm:text-2xl text-lg">
-					$<motion.h1>{rounded.toLocaleString("en-US")}</motion.h1>
+					$<motion.h1 className="flex items-center">{rounded.toLocaleString("en-US")}</motion.h1>
 				</div>
 			</div>
 			<div>
